@@ -1,0 +1,210 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+main{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items:flex-start;
+    height: 100vh;
+    background-image:  linear-gradient(#743ad5, #d53a9d);;
+}
+@media screen and (max-width: 567px) {
+    main{
+        flex-direction:column-reverse;
+        gap: 20px;
+        height: 100vh;
+    }
+    .PLAYLIST{
+        width: 75%;
+        margin-inline: auto;
+    }
+    .playlist{
+        width: 200%;
+    }
+  }
+
+.music-container{
+    width: min(100%-30px, 840px );
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid white; */
+    padding: 1rem 0;
+    height: 95vh;
+    gap: 70px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgb(251, 250, 250);
+}
+.tape-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+.tape{
+    background-color: white;
+    border-radius: 50%;
+    background: linear-gradient(black, black) padding-box,
+    linear-gradient( #f70a31,#5a0fdc) border-box;
+    border: 4px solid transparent;
+    border-radius: 50em;
+    padding: 2rem;
+   
+}
+.tapeRotate{
+    animation: rotation 10s infinite linear;
+    
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+.tape-image{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.tape-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* MUSIC BUTTON AND PROGRESS */
+
+.music-controller{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    bottom: 0;
+    padding-top: 2rem;
+
+}
+
+.MusicGif img{
+    width: 100px;
+    height: 40px;
+}
+
+.ProgressBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+}
+.Progress{
+    margin: 10px 5px;
+    width: 240px;
+    cursor: pointer;
+}
+.music-button{
+    /* margin-top: 1rem; */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.music-button i{
+    font-size: 20px;
+    color: white; 
+    margin: 0 15px;  
+    transition: 0.2s all;
+}
+.music-button #play{
+    font-size: 30px;  
+}
+.volumeControl i{
+    color: white;
+    font-size: 20px;
+    margin: 0 5px;
+}
+.Suffle-Repeat{
+    /* background-color: white; */
+    /* color: red; */
+    /* width: 40px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+}
+.suffleRepeatBtn{
+    align-content: center;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    width: 45px;
+    padding: 1px 0;
+    display: block;
+}
+.playlistBtn{
+    align-content: center;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    width: 45px;
+    display: block;
+
+    background-color: white;
+}
+
+
+.playlist{
+    width: 100%; 
+    margin: auto;
+    cursor: pointer;
+    padding: 0 2px;
+    margin: auto;
+    /* color: white; */
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: linear-gradient(black, black) padding-box,
+    linear-gradient( #f70a31,#5a0fdc) border-box;
+    border: 2px solid transparent;
+    color: white;
+}
+.PLAYLIST{
+    /* width: min(100%-300px, 840px ); */
+    width: 60vh;
+    margin-inline: auto;
+}
+h1{
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+#playlistImage{
+    border-radius: 50%;
+}
+#playlistBtn{
+    font-size: 25px;
+}
+.play-list{
+    background-image: url("/SongAlbum/music.gif");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.ShowHidePlayList{
+    display: none;
+}

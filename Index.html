@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    <main class="d-flex justify-content-between  align-items-center">
+        <div id="PlayList" class=" PLAYLIST m-auto">
+            
+        </div>
+        <div class="music-container px-2">
+            <div class="tape-container" >
+                <div class="tape" id='TapeRotate'>
+                    <div class="tape-image">
+                        <img id="tapeImage" src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8&w=1000&q=80" alt="">
+                    </div>
+                </div> 
+            </div>
+
+           
+            <!-- <audio src="/Songs/Maan Meri Jaan_320(PagalWorld.com.se).mp3" id="audio"></audio> -->
+
+            <div class="music-controller">
+                
+                <div class="w-100 f-left text-left pb-2">
+                    <marquee class="text-white text-left" width="100%" direction="left" id="MarqueTitle">
+                        This is a sample scrolling text that has scrolls texts to left.
+                    </marquee>
+                </div>
+                <div class="ProgressBar">
+                    <span id="StartTime" class="px-1">00:00</span>
+                    <input type="range" class="Progress d-block" id="myProgress"  min="0" max="100" value="0">
+                    <span id="EndingTime" class="px-1">00:00</span>
+                </div>
+                
+                <div class="music-button">
+                    <i class="fa fa-backward " id="backward"  onclick="prev_Song()"  aria-hidden="true"></i>
+                    <i class="fa fa-play-circle ListMusic" id="play" aria-hidden="true"></i>
+                    <i class="fa fa-forward" id="forward" onclick="next_Song()" aria-hidden="true"></i>
+                </div>
+
+                <div class=" volumeControl d-flex justify-content-between align-content-center px-1 mb-0 mt-4 w-100">
+                    
+                    <div class="Suffle-Repeat text-center">
+                        <button class="bg-white px-1 suffleRepeatBtn text-center">
+                            <i class="fa fa-repeat text-danger weight-bold py-1" id="Suffle_Repeat"  aria-hidden="true"><b class="weight-bolg"></b></i>
+                        </button>
+                        <button class="playlistBtn text-center " id="playlistButton">
+                            <i class="bi-music-note-list text-danger"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- <i class="fab fa-music-note-list"></i> -->
+                        
+                    <div class="d-flex align-items-center ">
+                        <input type="range" class="volumeProgress " id="VolProgress"  min="0" max="100" value="100">
+                        <i class="fa fa-volume-up" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </main>
+    
+    
+
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
